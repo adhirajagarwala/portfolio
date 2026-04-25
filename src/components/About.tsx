@@ -9,9 +9,13 @@ export default function About() {
           <h2 className="text-xs font-mono text-accent tracking-widest uppercase">
             About
           </h2>
-          <p className="text-zinc-300 text-base leading-[1.8] max-w-prose">
-            {about}
-          </p>
+          <div className="flex flex-col gap-4">
+            {about.split("\n\n").map((para, i) => (
+              <p key={i} className="text-zinc-300 text-base leading-[1.8] max-w-prose">
+                {para}
+              </p>
+            ))}
+          </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
             {[
               { label: "University", value: "UIUC" },

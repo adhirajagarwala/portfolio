@@ -7,7 +7,11 @@ export const meta = {
   linkedin: "https://linkedin.com/in/adhirajagarwala",
 };
 
-export const about = `I'm an Electrical Engineering student at the University of Illinois at Urbana-Champaign, where I'm a James Scholar with a 4.0 GPA. My work spans hardware and software — from building an LC-3 assembler in Rust to designing lunar habitat power networks. I'm drawn to the layer where logic meets silicon, and I enjoy working on projects that demand both rigorous thinking and building from scratch.`;
+export const about = `I grew up in Kolkata and ended up at UIUC studying Electrical Engineering — which in practice means spending a lot of time on problems most people assume are already solved.
+
+Right now I'm building an LC-3 assembler from scratch in Rust. It was supposed to be a weekend project. Before that: a lunar habitat power grid for a space settlement competition, a CERN beamline proposal, and Paperio — a tool that makes dense technical papers actually readable.
+
+I also spent three years on the board of Brightbytes, where we grew a computing literacy program for kids across three community centres in Kolkata. That one still matters to me.`;
 
 export const projects = [
   {
@@ -15,7 +19,7 @@ export const projects = [
     title: "LC-3 Assembler & Compiler",
     org: "Independent Research · Prof. Lumetta",
     description:
-      "Full LC-3 assembler in Rust with a complete pipeline: lexer, two-pass assembly, symbol table construction, and binary encoder supporting all 15 instructions, trap pseudo-ops, and assembler directives. Includes line-accurate error diagnostics.",
+      "A full assembler for the LC-3 instruction set, written in Rust. Lexer, two-pass assembly, symbol table, binary encoder for all 15 instructions. The error messages actually tell you what went wrong and where. Started as a weekend project.",
     tags: ["Rust", "Systems", "Compilers"],
     link: "https://github.com/adhirajagarwala",
   },
@@ -24,7 +28,7 @@ export const projects = [
     title: "Paperio",
     org: "Individual Project",
     description:
-      "Full-stack system that converts dense technical text into structured, readable explanations in real time. API-driven pipeline integrating large language models with modular prompt logic and scalable backend architecture.",
+      "Dense papers are hard to read. I built a pipeline that takes them apart and puts them back together in a form that doesn't make you want to close the tab. LLM-driven, real time, modular prompt architecture.",
     tags: ["LLMs", "APIs", "Full-stack"],
     link: undefined,
   },
@@ -33,7 +37,7 @@ export const projects = [
     title: "4-Bit Calculator",
     org: "Engineering Design Project",
     description:
-      "Functional calculator for addition and subtraction built entirely from logic circuits. Includes a register feature to reuse computed values. Designed for future scaling to support multiplication.",
+      "A calculator built entirely out of logic gates — no microcontrollers, no shortcuts. Just NAND all the way down. Handles addition and subtraction, with a register to carry results forward. Scaling it up next.",
     tags: ["Digital Logic", "Hardware"],
     link: undefined,
   },
@@ -42,7 +46,7 @@ export const projects = [
     title: "International Space Settlement Design Competition",
     org: "ISSDC · Runner-up, International",
     description:
-      "Directed design and deployment of a lunar habitat power distribution network prioritising solar storm resilience and energy allocation across uneven terrain. Presented technical innovations to Boeing engineers.",
+      "Designed the power distribution network for a lunar habitat. The hard part wasn't the solar panels — it was energy allocation across uneven terrain with a solar storm incoming. Runner-up internationally. Presented to Boeing engineers.",
     tags: ["Systems Engineering", "Research"],
     link: undefined,
   },
@@ -51,7 +55,7 @@ export const projects = [
     title: "CERN Beamline Proposal",
     org: "CERN · Team Lead",
     description:
-      "Led a team of six in crafting and presenting an experimental proposal to measure muon lifetimes using delay wire chambers and scintillation counters, in direct collaboration with CERN scientists.",
+      "A team of six, a beamline, and a proposal to measure muon lifetimes using delay wire chambers and scintillation counters. Worked directly with CERN physicists. It was exactly as interesting as it sounds.",
     tags: ["Physics", "Research", "Instrumentation"],
     link: undefined,
   },
@@ -60,7 +64,7 @@ export const projects = [
     title: "Model-Based Systems Engineering Paper",
     org: "Peer-reviewed Publication",
     description:
-      "Authored and published a peer-reviewed paper on the application of MBSE in design methodology.",
+      "Authored and published a peer-reviewed paper on the use of MBSE in design methodology. Link coming soon.",
     tags: ["MBSE", "Research", "Writing"],
     link: undefined,
   },

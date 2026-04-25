@@ -11,8 +11,8 @@ export default function Contact() {
           </h2>
           <div className="flex flex-col gap-2">
             <p className="text-zinc-300 text-base leading-relaxed">
-              I'm always up for interesting conversations — about engineering,
-              research, or ideas worth exploring.
+              If something here caught your eye, or you just want to talk —
+              reach out. I&apos;m pretty easy to get hold of.
             </p>
           </div>
           <div className="flex flex-col gap-3">

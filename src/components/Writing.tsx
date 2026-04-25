@@ -11,8 +11,9 @@ export default function Writing() {
           </h2>
           <div className="border border-[#1e1e2a] rounded-lg p-8 flex flex-col gap-3">
             <p className="text-sm text-zinc-400 leading-relaxed">
-              I'm working on writing more — about systems, hardware, ideas that
-              interest me. Check back soon.
+              Nothing here yet. I write when I have something worth saying —
+              usually about building things or how they work underneath. No
+              schedule, no newsletter.
             </p>
             <Link
               href="/blog"

@@ -13,12 +13,12 @@ export default function Hero() {
           <br />
           Builder.
           <br />
-          <span className="text-zinc-500">Curious about what sits</span>
+          <span className="text-zinc-500">From logic gates</span>
           <br />
-          <span className="text-zinc-500">beneath the software.</span>
+          <span className="text-zinc-500">to language models.</span>
         </h1>
-        <p className="text-zinc-400 text-base leading-relaxed max-w-md">
-          {meta.tagline}
+        <p className="text-zinc-500 text-sm font-mono">
+          Kolkata → Urbana-Champaign. UIUC &apos;28.
         </p>
         <div className="flex items-center gap-6 pt-2">
           <a
