@@ -9,16 +9,14 @@ export default function Hero() {
           Adhiraj Agarwala
         </p>
         <h1 className="text-4xl sm:text-5xl font-medium text-zinc-100 leading-[1.15] tracking-tight">
-          EE Student.
+          ECE at UIUC.
           <br />
-          Builder.
+          <span className="text-zinc-500">Race cars, Rust assemblers,</span>
           <br />
-          <span className="text-zinc-500">From logic gates</span>
-          <br />
-          <span className="text-zinc-500">to language models.</span>
+          <span className="text-zinc-500">and whatever breaks next.</span>
         </h1>
         <p className="text-zinc-500 text-sm font-mono">
-          Kolkata → Urbana-Champaign. UIUC &apos;28.
+          Kolkata → Urbana-Champaign. &apos;28.
         </p>
         <div className="flex items-center gap-6 pt-2">
           <a
