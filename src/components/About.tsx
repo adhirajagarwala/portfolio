@@ -23,7 +23,7 @@ export default function About() {
       <Reveal delay={80}>
         <div className="flex flex-col gap-4 mb-10">
           {about.split("\n\n").map((para, i) => (
-            <p key={i} className="text-[#555] text-[15px] leading-[1.8] max-w-2xl">
+            <p key={i} className="text-[#8a7a68] text-[15px] leading-[1.8] max-w-2xl">
               {para}
             </p>
           ))}
@@ -35,21 +35,21 @@ export default function About() {
           {stats.map((item) => (
             <div
               key={item.label}
-              className="bg-white border border-[#e5e5e5] rounded-lg p-4"
+              className="bg-[#1c1814] border border-[#2e2820] rounded-lg p-4"
             >
-              <span className="block font-mono text-[10px] text-[#999] uppercase tracking-wider mb-1.5">
+              <span className="block font-mono text-[10px] text-[#5a4f42] uppercase tracking-wider mb-1.5">
                 {item.label}
               </span>
               {Array.isArray(item.value) ? (
                 <span className="flex flex-col gap-0.5">
                   {item.value.map((v) => (
-                    <span key={v} className="text-sm text-[#111111] font-medium leading-snug block">
+                    <span key={v} className="text-sm text-[#ede8dc] font-medium leading-snug block">
                       {v}
                     </span>
                   ))}
                 </span>
               ) : (
-                <span className="text-sm text-[#111111] font-medium">
+                <span className="text-sm text-[#ede8dc] font-medium">
                   {item.value}
                 </span>
               )}

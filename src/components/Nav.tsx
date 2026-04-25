@@ -44,14 +44,14 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#fafafa]/80 backdrop-blur-sm border-b border-[#e5e5e5]"
+          ? "bg-[#14110e]/85 backdrop-blur-sm border-b border-[#2e2820]"
           : "bg-transparent"
       }`}
     >
       <nav className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link
           href="/"
-          className="font-mono text-sm text-[#C8860A] hover:text-[#a06800] transition-colors tracking-wide"
+          className="font-mono text-sm text-[#d4943a] hover:text-[#e8a84a] transition-colors tracking-wide"
         >
           AA
         </Link>
@@ -65,8 +65,8 @@ export default function Nav() {
                   href={l.href}
                   className={`text-xs transition-colors ${
                     isActive
-                      ? "text-[#111111]"
-                      : "text-[#999] hover:text-[#111111]"
+                      ? "text-[#ede8dc]"
+                      : "text-[#5a4f42] hover:text-[#ede8dc]"
                   }`}
                 >
                   {l.label}

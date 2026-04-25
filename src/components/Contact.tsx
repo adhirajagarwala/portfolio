@@ -41,18 +41,18 @@ export default function Contact() {
       </Reveal>
 
       <Reveal delay={80}>
-        <p className="text-[#666] text-sm mb-8">Reach out.</p>
+        <p className="text-[#8a7a68] text-sm mb-8">Reach out.</p>
         <div className="flex flex-col gap-4">
           {contactLinks.map((item) => (
             <div key={item.label} className="flex items-center gap-4">
-              <span className="font-mono text-[10px] text-[#999] uppercase tracking-wider w-16">
+              <span className="font-mono text-[10px] text-[#5a4f42] uppercase tracking-wider w-16">
                 {item.label}
               </span>
               <a
                 href={item.href}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-2 text-sm text-[#555] hover:text-[#C8860A] transition-colors"
+                className="flex items-center gap-2 text-sm text-[#8a7a68] hover:text-[#d4943a] transition-colors"
               >
                 {item.icon}
                 {item.value}

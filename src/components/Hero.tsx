@@ -31,16 +31,16 @@ export default function Hero() {
       <div className="absolute inset-0 dot-grid" aria-hidden="true" />
 
       <div className="relative z-10 flex flex-col gap-5 max-w-xl">
-        <h1 className="hero-item hero-item-1 text-5xl sm:text-6xl font-light text-[#111111] tracking-tight leading-[1.1]">
+        <h1 className="hero-item hero-item-1 text-5xl sm:text-6xl font-light text-[#ede8dc] tracking-tight leading-[1.1]">
           Adhiraj Agarwala
         </h1>
 
-        <p className="hero-item hero-item-2 text-lg text-[#666] leading-relaxed max-w-lg">
+        <p className="hero-item hero-item-2 text-lg text-[#8a7a68] leading-relaxed max-w-lg">
           Studying ECE at UIUC — curious about embedded systems and what sits
           beneath the software.
         </p>
 
-        <p className="hero-item hero-item-3 font-mono text-sm text-[#999]">
+        <p className="hero-item hero-item-3 font-mono text-sm text-[#5a4f42]">
           Kolkata → Urbana-Champaign · UIUC &apos;28
         </p>
 
@@ -55,7 +55,7 @@ export default function Hero() {
               href={link.href}
               target={link.external ? "_blank" : undefined}
               rel={link.external ? "noopener noreferrer" : undefined}
-              className="inline-flex items-center gap-1.5 text-xs text-[#666] border border-[#e5e5e5] px-3 py-1.5 rounded-full hover:text-[#111111] hover:border-[#999] transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-[#8a7a68] border border-[#2e2820] px-3 py-1.5 rounded-full hover:text-[#ede8dc] hover:border-[#5a4f42] transition-colors"
             >
               {link.icon}
               {link.label}

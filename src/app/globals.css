@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Colors — light mode */
-  --color-bg:               #fafafa;
-  --color-surface:          #ffffff;
-  --color-surface-elevated: #f4f4f4;
-  --color-border:           #e5e5e5;
-  --color-border-subtle:    #efefef;
-  --color-primary:          #111111;
-  --color-muted:            #666666;
-  --color-subtle:           #999999;
-  --color-accent:           #C8860A;
-  --color-accent-muted:     rgba(200, 134, 10, 0.08);
+  /* Colors — warm espresso dark */
+  --color-bg:               #14110e;
+  --color-surface:          #1c1814;
+  --color-surface-elevated: #221e18;
+  --color-border:           #2e2820;
+  --color-border-subtle:    #262218;
+  --color-primary:          #ede8dc;
+  --color-muted:            #8a7a68;
+  --color-subtle:           #5a4f42;
+  --color-accent:           #d4943a;
+  --color-accent-muted:     rgba(212, 148, 58, 0.10);
 
   /* Fonts */
   --font-sans: var(--font-inter);
@@ -25,8 +25,8 @@ html {
 }
 
 body {
-  background-color: #fafafa;
-  color: #111111;
+  background-color: #14110e;
+  color: #ede8dc;
   font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 15px;
   line-height: 1.7;
@@ -64,21 +64,21 @@ body {
 /* ── Dot grid (hero background) ──────────────────────────── */
 
 .dot-grid {
-  background-image: radial-gradient(circle, #d4d4d4 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(212, 148, 58, 0.18) 1px, transparent 1px);
   background-size: 28px 28px;
-  opacity: 0.35;
+  opacity: 1;
   pointer-events: none;
 }
 
 /* ── Selection ───────────────────────────────────────────── */
 
 ::selection {
-  background-color: rgba(200, 134, 10, 0.12);
-  color: #111111;
+  background-color: rgba(212, 148, 58, 0.25);
+  color: #ede8dc;
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */
 
 ::-webkit-scrollbar       { width: 5px; }
-::-webkit-scrollbar-track { background: #fafafa; }
-::-webkit-scrollbar-thumb { background: #d0d0d0; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #14110e; }
+::-webkit-scrollbar-thumb { background: #3a3028; border-radius: 3px; }

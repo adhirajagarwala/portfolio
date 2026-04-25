@@ -10,15 +10,15 @@ export default function Writing() {
       </Reveal>
 
       <Reveal delay={80}>
-        <div className="border border-[#e5e5e5] rounded-lg p-8 flex flex-col gap-3">
-          <p className="text-sm text-[#666] leading-relaxed">
+        <div className="border border-[#2e2820] rounded-lg p-8 flex flex-col gap-3">
+          <p className="text-sm text-[#8a7a68] leading-relaxed">
             Nothing here yet. I write when I have something worth saying —
             usually about building things or how they work underneath. No
             schedule, no newsletter.
           </p>
           <Link
             href="/blog"
-            className="font-mono text-[11px] text-[#C8860A] hover:underline w-fit"
+            className="font-mono text-[11px] text-[#d4943a] hover:underline w-fit"
           >
             Go to blog →
           </Link>

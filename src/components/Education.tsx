@@ -11,22 +11,22 @@ export default function Education() {
 
       <Reveal delay={80}>
         <div className="relative">
-          <div className="absolute left-[6.5rem] top-0 bottom-0 w-px bg-[#e5e5e5]" />
+          <div className="absolute left-[6.5rem] top-0 bottom-0 w-px bg-[#2e2820]" />
 
           <div className="flex flex-col">
             {education.map((e) => (
               <div key={e.school} className="flex gap-0 pb-9 last:pb-0">
-                <span className="w-[6.5rem] shrink-0 font-mono text-[11px] text-[#999] pt-0.5 pr-5 text-right">
+                <span className="w-[6.5rem] shrink-0 font-mono text-[11px] text-[#5a4f42] pt-0.5 pr-5 text-right">
                   {e.year}
                 </span>
                 <div className="flex-1 pl-6">
-                  <h3 className="text-sm font-medium text-[#111111] leading-snug">
+                  <h3 className="text-sm font-medium text-[#ede8dc] leading-snug">
                     {e.degree}
                   </h3>
-                  <p className="font-mono text-[11px] text-[#888] mt-0.5">
+                  <p className="font-mono text-[11px] text-[#6b5d4e] mt-0.5">
                     {e.school}
                   </p>
-                  <p className="text-xs text-[#888] mt-1">{e.detail}</p>
+                  <p className="text-xs text-[#6b5d4e] mt-1">{e.detail}</p>
                 </div>
               </div>
             ))}
