@@ -1,35 +1,31 @@
 import { skills } from "@/lib/data";
 import Reveal from "./Reveal";
+import SectionHeader from "./SectionHeader";
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 max-w-2xl mx-auto w-full py-24">
+    <section id="skills" className="px-6 max-w-3xl mx-auto w-full py-32">
       <Reveal>
-        <h2 className="text-xs font-mono text-accent tracking-widest uppercase mb-12">
-          Skills
-        </h2>
+        <SectionHeader label="skills" heading="Skills" />
       </Reveal>
-      <div className="flex flex-col gap-8">
-        {skills.map((group, i) => (
-          <Reveal key={group.category} delay={i * 60}>
-            <div className="flex flex-col sm:flex-row sm:gap-10 gap-3">
-              <span className="text-xs font-mono text-zinc-600 sm:w-24 shrink-0 pt-1">
+
+      <Reveal delay={80}>
+        <div className="flex flex-col divide-y divide-[#1a1a1a]">
+          {skills.map((group) => (
+            <div
+              key={group.category}
+              className="flex flex-col sm:flex-row sm:gap-10 gap-1.5 py-4 first:pt-0 last:pb-0"
+            >
+              <span className="font-mono text-[10px] text-[#444] uppercase tracking-wider sm:w-28 shrink-0 pt-[3px]">
                 {group.category}
               </span>
-              <div className="flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <span
-                    key={item}
-                    className="text-xs text-zinc-300 bg-[#111116] border border-[#1e1e2a] px-3 py-1 rounded-full hover:border-accent/40 hover:text-accent transition-colors"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <span className="text-sm text-[#666]">
+                {group.items.join(" · ")}
+              </span>
             </div>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Reveal>
     </section>
   );
 }

@@ -1,46 +1,55 @@
 import { experience } from "@/lib/data";
 import Reveal from "./Reveal";
+import SectionHeader from "./SectionHeader";
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 max-w-2xl mx-auto w-full py-24">
+    <section id="experience" className="px-6 max-w-3xl mx-auto w-full py-32">
       <Reveal>
-        <h2 className="text-xs font-mono text-accent tracking-widest uppercase mb-12">
-          Experience
-        </h2>
+        <SectionHeader label="experience" heading="Experience" />
       </Reveal>
-      <div className="flex flex-col divide-y divide-[#1e1e2a]">
-        {experience.map((e, i) => (
-          <Reveal key={e.title} delay={i * 60}>
-            <div className="py-7 flex flex-col sm:flex-row sm:gap-10 gap-3">
-              <span className="text-xs font-mono text-zinc-600 sm:w-16 shrink-0 pt-0.5">
-                {e.year}
-              </span>
-              <div className="flex flex-col gap-2 flex-1">
-                <div>
-                  <h3 className="text-sm font-medium text-zinc-100">
+
+      <Reveal delay={80}>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-[6.5rem] top-0 bottom-0 w-px bg-[#1e1e1e]" />
+
+          <div className="flex flex-col">
+            {experience.map((e, i) => (
+              <div key={e.title} className="flex gap-0 pb-10 last:pb-0">
+                {/* Date */}
+                <span className="w-[6.5rem] shrink-0 font-mono text-[11px] text-[#444] pt-0.5 pr-5 text-right">
+                  {e.year}
+                </span>
+
+                {/* Content */}
+                <div className="flex-1 pl-6 pb-2">
+                  <h3 className="text-sm font-medium text-[#f0f0f0] leading-snug">
                     {e.title}
                   </h3>
-                  <p className="text-xs text-zinc-500 mt-0.5">{e.org}</p>
+                  <p className="font-mono text-[11px] text-[#555] mt-0.5 mb-2">
+                    {e.org}
+                  </p>
+                  <p className="text-sm text-[#666] leading-relaxed">
+                    {e.description}
+                  </p>
+                  {"link" in e && e.link && (
+                    <a
+                      href={e.link as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block font-mono text-[11px] text-[#E8A838] hover:underline mt-2"
+                    >
+                      {e.link} ↗
+                    </a>
+                  )}
                 </div>
-                <p className="text-sm text-zinc-400 leading-relaxed">
-                  {e.description}
-                </p>
-                {"link" in e && e.link && (
-                  <a
-                    href={e.link as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-accent hover:underline w-fit"
-                  >
-                    {e.link} ↗
-                  </a>
-                )}
               </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
+            ))}
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }

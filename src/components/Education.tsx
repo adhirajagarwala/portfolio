@@ -1,30 +1,39 @@
 import { education } from "@/lib/data";
 import Reveal from "./Reveal";
+import SectionHeader from "./SectionHeader";
 
 export default function Education() {
   return (
-    <section id="education" className="px-6 max-w-2xl mx-auto w-full py-24">
+    <section id="education" className="px-6 max-w-3xl mx-auto w-full py-32">
       <Reveal>
-        <h2 className="text-xs font-mono text-accent tracking-widest uppercase mb-12">
-          Education
-        </h2>
+        <SectionHeader label="education" heading="Education" />
       </Reveal>
-      <div className="flex flex-col divide-y divide-[#1e1e2a]">
-        {education.map((e, i) => (
-          <Reveal key={e.school} delay={i * 80}>
-            <div className="py-7 flex flex-col sm:flex-row sm:gap-10 gap-3">
-              <span className="text-xs font-mono text-zinc-600 sm:w-16 shrink-0 pt-0.5">
-                {e.year}
-              </span>
-              <div className="flex flex-col gap-1">
-                <h3 className="text-sm font-medium text-zinc-100">{e.degree}</h3>
-                <p className="text-xs text-zinc-500">{e.school}</p>
-                <p className="text-xs text-zinc-500 mt-1">{e.detail}</p>
+
+      <Reveal delay={80}>
+        {/* Timeline — same layout as Experience */}
+        <div className="relative">
+          <div className="absolute left-[6.5rem] top-0 bottom-0 w-px bg-[#1e1e1e]" />
+
+          <div className="flex flex-col">
+            {education.map((e) => (
+              <div key={e.school} className="flex gap-0 pb-10 last:pb-0">
+                <span className="w-[6.5rem] shrink-0 font-mono text-[11px] text-[#444] pt-0.5 pr-5 text-right">
+                  {e.year}
+                </span>
+                <div className="flex-1 pl-6">
+                  <h3 className="text-sm font-medium text-[#f0f0f0] leading-snug">
+                    {e.degree}
+                  </h3>
+                  <p className="font-mono text-[11px] text-[#555] mt-0.5">
+                    {e.school}
+                  </p>
+                  <p className="text-xs text-[#555] mt-1">{e.detail}</p>
+                </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
+            ))}
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }

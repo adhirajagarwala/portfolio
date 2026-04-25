@@ -20,6 +20,7 @@ export const projects = [
       "A full assembler for the LC-3 instruction set, written in Rust. Lexer, two-pass assembly, symbol table, binary encoder for all 15 instructions. Error messages that are actually useful.",
     tags: ["Rust", "Systems", "Compilers"],
     link: "https://github.com/adhirajagarwala",
+    hidden: false,
   },
   {
     year: "2026",
@@ -29,6 +30,7 @@ export const projects = [
       "Dense papers are hard to read. I built a pipeline that parses and restructures them in real time — LLM-driven, with a modular prompt architecture on the backend.",
     tags: ["LLMs", "APIs", "Full-stack"],
     link: undefined,
+    hidden: false,
   },
   {
     year: "2025–26",
@@ -38,6 +40,7 @@ export const projects = [
       "A calculator built entirely from logic circuits — no microcontrollers, no shortcuts. Addition and subtraction, with a register to carry results forward.",
     tags: ["Digital Logic", "Hardware"],
     link: undefined,
+    hidden: false,
   },
   {
     year: "2025",
@@ -47,6 +50,7 @@ export const projects = [
       "Light-seeking robot (analog sensor feedback), applause meter (signal conditioning and threshold detection), and a vending machine controller (FSM in digital logic). First real exposure to hardware that does something.",
     tags: ["Analog", "Signal Conditioning", "Digital Logic"],
     link: undefined,
+    hidden: false,
   },
   {
     year: "2024–25",
@@ -56,6 +60,7 @@ export const projects = [
       "Designed the power distribution network for a lunar habitat. The hard part wasn't the solar panels — it was energy allocation across uneven terrain with a solar storm incoming. Presented to Boeing engineers.",
     tags: ["Systems Engineering", "Research"],
     link: undefined,
+    hidden: false,
   },
   {
     year: "2024",
@@ -65,6 +70,7 @@ export const projects = [
       "Led a team of six on an experimental proposal to measure muon lifetimes using delay wire chambers and scintillation counters, working directly with CERN physicists.",
     tags: ["Physics", "Research", "Instrumentation"],
     link: undefined,
+    hidden: false,
   },
   {
     year: "2024",
@@ -74,35 +80,36 @@ export const projects = [
       "Authored and published a peer-reviewed paper on the use of MBSE in design methodology.",
     tags: ["MBSE", "Research"],
     link: undefined,
+    hidden: true, // re-enable when link is available
   },
 ];
 
 export const skills = [
   {
     category: "Languages",
-    items: ["C", "Rust", "Python", "Assembly (LC-3)"],
+    items: ["Rust", "C", "Python", "LC-3 Assembly"],
   },
   {
     category: "Hardware",
-    items: ["Digital Logic Design", "Circuit Analysis", "Signal Conditioning", "Power Distribution"],
+    items: ["Digital Logic Design", "Circuit Analysis", "Embedded Systems", "Signal Conditioning"],
   },
   {
-    category: "Tools",
-    items: ["Git", "Linux"],
+    category: "Software",
+    items: ["LLM APIs", "REST APIs", "Next.js", "Version Control (Git)"],
   },
   {
-    category: "Areas",
-    items: ["Embedded Systems", "Compilers", "LLM APIs"],
+    category: "Other",
+    items: ["Technical Writing", "Systems Engineering", "Research"],
   },
 ];
 
 export const experience = [
   {
     year: "2025–",
-    title: "Low Voltage & Sensors",
-    org: "Illini Electric Motorsports · Formula EV",
+    title: "Low Voltage & Sensors — Illini Electric Motorsports",
+    org: "Formula EV · UIUC",
     description:
-      "Part of the team building a formula-style electric race car from scratch. On the low voltage side: power distribution and control circuits. On sensors: signal conditioning and getting reliable data out of hardware running at speed on a track.",
+      "Working on the low voltage system and sensor integration for UIUC's formula-style electric race car. On the low voltage side I work on power distribution and control circuits. On sensors I deal with signal conditioning and getting reliable data out of hardware under real track conditions.",
   },
   {
     year: "2026–",

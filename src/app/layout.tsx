@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Adhiraj Agarwala",
   description:
-    "Student at UIUC studying electrical and computer engineering — curious about embedded systems and what sits beneath the software.",
+    "Studying ECE at UIUC — curious about embedded systems and what sits beneath the software.",
   openGraph: {
     title: "Adhiraj Agarwala",
-    description:
-      "Student at UIUC studying electrical and computer engineering.",
+    description: "Studying ECE at UIUC — curious about embedded systems and what sits beneath the software.",
     url: "https://adhirajagarwala.com",
     siteName: "Adhiraj Agarwala",
   },
@@ -27,13 +28,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${inter.variable} ${jetbrains.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col">{children}</body>
     </html>

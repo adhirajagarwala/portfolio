@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-accent: #818cf8;
-  --color-muted: #71717a;
-  --color-surface: #111116;
-  --color-line: #1e1e2a;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-bg:               #0a0a0a;
+  --color-surface:          #111111;
+  --color-surface-elevated: #1a1a1a;
+  --color-border:           #222222;
+  --color-primary:          #f0f0f0;
+  --color-muted:            #666666;
+  --color-subtle:           #444444;
+  --color-accent:           #E8A838;
+  --color-accent-muted:     rgba(232, 168, 56, 0.12);
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
 }
+
+/* ── Base ────────────────────────────────────────────────── */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #09090b;
-  color: #f4f4f5;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
 }
+
+/* ── Scroll reveal ───────────────────────────────────────── */
 
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(16px);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
@@ -29,18 +44,40 @@ body {
   transform: translateY(0);
 }
 
-::selection {
-  background-color: #818cf840;
-  color: #f4f4f5;
+/* ── Hero stagger animations ─────────────────────────────── */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0);    }
 }
 
-::-webkit-scrollbar {
-  width: 6px;
+.hero-item {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
 }
-::-webkit-scrollbar-track {
-  background: #09090b;
+.hero-item-1 { animation-delay: 0ms;   }
+.hero-item-2 { animation-delay: 100ms; }
+.hero-item-3 { animation-delay: 200ms; }
+.hero-item-4 { animation-delay: 320ms; }
+
+/* ── Dot grid (hero background) ──────────────────────────── */
+
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.045;
+  pointer-events: none;
 }
-::-webkit-scrollbar-thumb {
-  background: #1e1e2a;
-  border-radius: 3px;
+
+/* ── Selection ───────────────────────────────────────────── */
+
+::selection {
+  background-color: rgba(232, 168, 56, 0.18);
+  color: #f0f0f0;
 }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 3px; }
