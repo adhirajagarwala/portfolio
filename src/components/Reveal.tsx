@@ -17,6 +17,13 @@ export default function Reveal({
     const el = ref.current;
     if (!el) return;
 
+    // Already in viewport on mount (e.g. navigated via anchor link)
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setTimeout(() => el.classList.add("in-view"), delay);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
