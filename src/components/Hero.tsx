@@ -27,40 +27,35 @@ function EmailIcon() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 max-w-3xl mx-auto w-full">
-      {/* Dot grid background */}
+    <section className="relative min-h-[65vh] flex flex-col justify-center px-6 max-w-3xl mx-auto w-full">
       <div className="absolute inset-0 dot-grid" aria-hidden="true" />
 
       <div className="relative z-10 flex flex-col gap-5 max-w-xl">
-        {/* Name */}
-        <h1 className="hero-item hero-item-1 text-5xl sm:text-6xl font-light text-[#f0f0f0] tracking-tight leading-[1.1]">
+        <h1 className="hero-item hero-item-1 text-5xl sm:text-6xl font-light text-[#111111] tracking-tight leading-[1.1]">
           Adhiraj Agarwala
         </h1>
 
-        {/* Tagline */}
         <p className="hero-item hero-item-2 text-lg text-[#666] leading-relaxed max-w-lg">
           Studying ECE at UIUC — curious about embedded systems and what sits
           beneath the software.
         </p>
 
-        {/* Location line */}
-        <p className="hero-item hero-item-3 font-mono text-sm text-[#444]">
+        <p className="hero-item hero-item-3 font-mono text-sm text-[#999]">
           Kolkata → Urbana-Champaign · UIUC &apos;28
         </p>
 
-        {/* Links */}
         <div className="hero-item hero-item-4 flex items-center gap-3 flex-wrap">
           {[
-            { label: "GitHub",   href: meta.github,              icon: <GithubIcon />,   external: true  },
-            { label: "LinkedIn", href: meta.linkedin,            icon: <LinkedInIcon />, external: true  },
-            { label: "Email",    href: `mailto:${meta.email}`,   icon: <EmailIcon />,    external: false },
+            { label: "GitHub",   href: meta.github,            icon: <GithubIcon />,   external: true  },
+            { label: "LinkedIn", href: meta.linkedin,          icon: <LinkedInIcon />, external: true  },
+            { label: "Email",    href: `mailto:${meta.email}`, icon: <EmailIcon />,    external: false },
           ].map((link) => (
             <a
               key={link.label}
               href={link.href}
               target={link.external ? "_blank" : undefined}
               rel={link.external ? "noopener noreferrer" : undefined}
-              className="inline-flex items-center gap-1.5 text-xs text-[#666] border border-[#222] px-3 py-1.5 rounded-full hover:text-[#f0f0f0] hover:border-[#444] transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-[#666] border border-[#e5e5e5] px-3 py-1.5 rounded-full hover:text-[#111111] hover:border-[#999] transition-colors"
             >
               {link.icon}
               {link.label}

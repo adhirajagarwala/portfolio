@@ -28,14 +28,14 @@ function LinkedInIcon() {
 }
 
 const contactLinks = [
-  { label: "Email",    value: meta.email,            href: `mailto:${meta.email}`, icon: <EmailIcon />,    external: false },
-  { label: "GitHub",   value: "adhirajagarwala",      href: meta.github,            icon: <GithubIcon />,   external: true  },
-  { label: "LinkedIn", value: "in/adhirajagarwala",   href: meta.linkedin,          icon: <LinkedInIcon />, external: true  },
+  { label: "Email",    value: meta.email,          href: `mailto:${meta.email}`, icon: <EmailIcon />,    external: false },
+  { label: "GitHub",   value: "adhirajagarwala",    href: meta.github,            icon: <GithubIcon />,   external: true  },
+  { label: "LinkedIn", value: "in/adhirajagarwala", href: meta.linkedin,          icon: <LinkedInIcon />, external: true  },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-6 max-w-3xl mx-auto w-full py-32">
+    <section id="contact" className="px-6 max-w-3xl mx-auto w-full py-20">
       <Reveal>
         <SectionHeader label="contact" heading="Contact" />
       </Reveal>
@@ -45,14 +45,14 @@ export default function Contact() {
         <div className="flex flex-col gap-4">
           {contactLinks.map((item) => (
             <div key={item.label} className="flex items-center gap-4">
-              <span className="font-mono text-[10px] text-[#444] uppercase tracking-wider w-16">
+              <span className="font-mono text-[10px] text-[#999] uppercase tracking-wider w-16">
                 {item.label}
               </span>
               <a
                 href={item.href}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-2 text-sm text-[#666] hover:text-[#E8A838] transition-colors"
+                className="flex items-center gap-2 text-sm text-[#555] hover:text-[#C8860A] transition-colors"
               >
                 {item.icon}
                 {item.value}

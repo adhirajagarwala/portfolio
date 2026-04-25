@@ -14,8 +14,8 @@ const navLinks = [
 const sectionIds = ["about", "projects", "experience", "writing", "contact"];
 
 export default function Nav() {
-  const [scrolled, setScrolled]       = useState(false);
-  const [activeSection, setActive]    = useState("");
+  const [scrolled, setScrolled]    = useState(false);
+  const [activeSection, setActive] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -24,7 +24,6 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Scroll-spy
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -45,20 +44,18 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0a0a]/85 backdrop-blur-sm border-b border-[#222]"
+          ? "bg-[#fafafa]/80 backdrop-blur-sm border-b border-[#e5e5e5]"
           : "bg-transparent"
       }`}
     >
       <nav className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-        {/* Monogram */}
         <Link
           href="/"
-          className="font-mono text-sm text-[#E8A838] hover:text-[#f0c060] transition-colors tracking-wide"
+          className="font-mono text-sm text-[#C8860A] hover:text-[#a06800] transition-colors tracking-wide"
         >
           AA
         </Link>
 
-        {/* Nav links */}
         <ul className="flex items-center gap-7">
           {navLinks.map((l) => {
             const isActive = activeSection === l.href.replace("#", "");
@@ -68,8 +65,8 @@ export default function Nav() {
                   href={l.href}
                   className={`text-xs transition-colors ${
                     isActive
-                      ? "text-[#f0f0f0]"
-                      : "text-[#666] hover:text-[#f0f0f0]"
+                      ? "text-[#111111]"
+                      : "text-[#999] hover:text-[#111111]"
                   }`}
                 >
                   {l.label}

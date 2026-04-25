@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Colors */
-  --color-bg:               #0a0a0a;
-  --color-surface:          #111111;
-  --color-surface-elevated: #1a1a1a;
-  --color-border:           #222222;
-  --color-primary:          #f0f0f0;
+  /* Colors — light mode */
+  --color-bg:               #fafafa;
+  --color-surface:          #ffffff;
+  --color-surface-elevated: #f4f4f4;
+  --color-border:           #e5e5e5;
+  --color-border-subtle:    #efefef;
+  --color-primary:          #111111;
   --color-muted:            #666666;
-  --color-subtle:           #444444;
-  --color-accent:           #E8A838;
-  --color-accent-muted:     rgba(232, 168, 56, 0.12);
+  --color-subtle:           #999999;
+  --color-accent:           #C8860A;
+  --color-accent-muted:     rgba(200, 134, 10, 0.08);
 
   /* Fonts */
   --font-sans: var(--font-inter);
@@ -24,8 +25,8 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #f0f0f0;
+  background-color: #fafafa;
+  color: #111111;
   font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 15px;
   line-height: 1.7;
@@ -63,21 +64,21 @@ body {
 /* ── Dot grid (hero background) ──────────────────────────── */
 
 .dot-grid {
-  background-image: radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1px);
+  background-image: radial-gradient(circle, #d4d4d4 1px, transparent 1px);
   background-size: 28px 28px;
-  opacity: 0.045;
+  opacity: 0.35;
   pointer-events: none;
 }
 
 /* ── Selection ───────────────────────────────────────────── */
 
 ::selection {
-  background-color: rgba(232, 168, 56, 0.18);
-  color: #f0f0f0;
+  background-color: rgba(200, 134, 10, 0.12);
+  color: #111111;
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */
 
 ::-webkit-scrollbar       { width: 5px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
-::-webkit-scrollbar-thumb { background: #222; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #fafafa; }
+::-webkit-scrollbar-thumb { background: #d0d0d0; border-radius: 3px; }

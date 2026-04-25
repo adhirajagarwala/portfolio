@@ -4,31 +4,26 @@ import SectionHeader from "./SectionHeader";
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 max-w-3xl mx-auto w-full py-32">
+    <section id="experience" className="px-6 max-w-3xl mx-auto w-full py-20">
       <Reveal>
         <SectionHeader label="experience" heading="Experience" />
       </Reveal>
 
       <Reveal delay={80}>
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-[6.5rem] top-0 bottom-0 w-px bg-[#1e1e1e]" />
+          <div className="absolute left-[6.5rem] top-0 bottom-0 w-px bg-[#e5e5e5]" />
 
           <div className="flex flex-col">
-            {experience.map((e, i) => (
-              <div key={e.title} className="flex gap-0 pb-10 last:pb-0">
-                {/* Date */}
-                <span className="w-[6.5rem] shrink-0 font-mono text-[11px] text-[#444] pt-0.5 pr-5 text-right">
+            {experience.map((e) => (
+              <div key={e.title} className="flex gap-0 pb-9 last:pb-0">
+                <span className="w-[6.5rem] shrink-0 font-mono text-[11px] text-[#999] pt-0.5 pr-5 text-right">
                   {e.year}
                 </span>
-
-                {/* Content */}
-                <div className="flex-1 pl-6 pb-2">
-                  <h3 className="text-sm font-medium text-[#f0f0f0] leading-snug">
+                <div className="flex-1 pl-6 pb-1">
+                  <h3 className="text-sm font-medium text-[#111111] leading-snug">
                     {e.title}
                   </h3>
-                  <p className="font-mono text-[11px] text-[#555] mt-0.5 mb-2">
+                  <p className="font-mono text-[11px] text-[#888] mt-0.5 mb-2">
                     {e.org}
                   </p>
                   <p className="text-sm text-[#666] leading-relaxed">
@@ -39,7 +34,7 @@ export default function Experience() {
                       href={e.link as string}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block font-mono text-[11px] text-[#E8A838] hover:underline mt-2"
+                      className="inline-block font-mono text-[11px] text-[#C8860A] hover:underline mt-2"
                     >
                       {e.link} ↗
                     </a>
