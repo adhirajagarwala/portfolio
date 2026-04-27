@@ -23,7 +23,7 @@ export default function About() {
       <Reveal delay={80}>
         <div className="flex flex-col gap-4 mb-10">
           {about.split("\n\n").map((para, i) => (
-            <p key={i} className="text-[#8a7a68] text-[15px] leading-[1.8] max-w-2xl">
+            <p key={i} className="text-[#a09080] text-[15px] leading-[1.8] max-w-2xl">
               {para}
             </p>
           ))}

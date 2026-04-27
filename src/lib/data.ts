@@ -3,13 +3,16 @@ export const meta = {
   email: "aa166@illinois.edu",
   github: "https://github.com/adhirajagarwala",
   linkedin: "https://linkedin.com/in/adhirajagarwala",
+  // Add your resume PDF to /public/resume.pdf and set this to "/resume.pdf"
+  resume: "" as string,
+  seeking: "Open to Summer 2026 internships · embedded / hardware",
 };
 
-export const about = `I grew up in Kolkata. Now I study Electrical and Computer Engineering at UIUC — spending most of my time on problems that live close to the hardware.
+export const about = `I build systems that sit close to the hardware — assemblers, logic circuits, sensor pipelines. Currently studying ECE at UIUC with a focus on embedded systems and digital design.
 
-Right now I'm building an LC-3 assembler from scratch in Rust. Before that: a lunar habitat power grid for a space settlement competition, a CERN beamline proposal, and Paperio — a tool that makes dense technical papers actually readable.
+At UIUC I'm on the Illini Electric Motorsports team working on low voltage and sensor integration for the formula EV car. Before that: a lunar habitat power grid at ISSDC where our team placed runner-up internationally, a CERN beamline proposal, and Paperio — a tool that makes dense technical papers actually readable.
 
-I also spent three years on the board of Brightbytes, growing a computing literacy program for kids across three community centres in Kolkata.`;
+I grew up in Kolkata. Outside engineering, I spent three years on the board of Brightbytes, scaling a computing literacy program for kids across three community centres.`;
 
 export const projects = [
   {
@@ -17,9 +20,10 @@ export const projects = [
     title: "LC-3 Assembler & Compiler",
     org: "Independent Research · Prof. Lumetta",
     description:
-      "A full assembler for the LC-3 instruction set, written in Rust. Lexer, two-pass assembly, symbol table, binary encoder for all 15 instructions. Error messages that are actually useful.",
+      "A complete two-pass assembler for the LC-3 instruction set, written from scratch in Rust. Implements a lexer, symbol table, and binary encoder covering all 15 instructions — ADD, AND, BR, JMP, JSR, LD, LDI, LDR, LEA, NOT, ST, STI, STR, TRAP, and RTI. Error messages flag exact line, column, and cause.",
     tags: ["Rust", "Systems", "Compilers"],
-    link: "https://github.com/adhirajagarwala",
+    // Update to direct repo URL once public, e.g. "https://github.com/adhirajagarwala/lc3-assembler"
+    link: undefined,
     hidden: false,
   },
   {
@@ -27,7 +31,7 @@ export const projects = [
     title: "Paperio",
     org: "Individual Project",
     description:
-      "Dense papers are hard to read. I built a pipeline that parses and restructures them in real time — LLM-driven, with a modular prompt architecture on the backend.",
+      "A pipeline that takes dense academic PDFs and restructures them for readability — section by section, context preserved. LLM-driven backend with a modular prompt architecture; handles varied paper formats without prompt rewrites.",
     tags: ["LLMs", "APIs", "Full-stack"],
     link: undefined,
     hidden: false,
@@ -37,7 +41,7 @@ export const projects = [
     title: "4-Bit Calculator",
     org: "Engineering Design Project",
     description:
-      "A calculator built entirely from logic circuits — no microcontrollers, no shortcuts. Addition and subtraction, with a register to carry results forward.",
+      "A 4-bit arithmetic unit built entirely from discrete logic gates — no microcontrollers, no pre-built ALU chips. Implements addition and subtraction with carry propagation, a register to hold intermediate results, and 7-segment display output.",
     tags: ["Digital Logic", "Hardware"],
     link: undefined,
     hidden: false,
@@ -47,7 +51,7 @@ export const projects = [
     title: "ECE 110 / 120 Lab Projects",
     org: "UIUC · Course Projects",
     description:
-      "Light-seeking robot (analog sensor feedback), applause meter (signal conditioning and threshold detection), and a vending machine controller (FSM in digital logic). First real exposure to hardware that does something.",
+      "Three hardware projects built from first principles: a light-seeking robot using analog comparator feedback, an applause meter with signal conditioning and threshold detection, and a vending machine controller implemented as a finite state machine in combinational logic.",
     tags: ["Analog", "Signal Conditioning", "Digital Logic"],
     link: undefined,
     hidden: false,
@@ -57,7 +61,7 @@ export const projects = [
     title: "International Space Settlement Design Competition",
     org: "ISSDC · Runner-up, International",
     description:
-      "Designed the power distribution network for a lunar habitat. The hard part wasn't the solar panels — it was energy allocation across uneven terrain with a solar storm incoming. Presented to Boeing engineers.",
+      "Designed the full power distribution network for a 1,200-person lunar habitat concept — permanently shadowed crater site, solar storm contingency, uneven terrain. Presented the design to Boeing engineers at the international finals; team placed runner-up.",
     tags: ["Systems Engineering", "Research"],
     link: undefined,
     hidden: false,
@@ -67,7 +71,7 @@ export const projects = [
     title: "CERN Beamline Proposal",
     org: "CERN · Team Lead",
     description:
-      "Led a team of six on an experimental proposal to measure muon lifetimes using delay wire chambers and scintillation counters, working directly with CERN physicists.",
+      "Team lead for an experimental proposal submitted to CERN's Beamline for Schools competition. Designed a muon lifetime measurement experiment using delay wire chambers and scintillation counters. Coordinated six people and liaised directly with CERN physicists during the design review.",
     tags: ["Physics", "Research", "Instrumentation"],
     link: undefined,
     hidden: false,

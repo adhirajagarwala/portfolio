@@ -39,7 +39,7 @@ export default function Projects() {
                   </a>
                 )}
               </div>
-              <p className="text-sm text-[#8a7a68] leading-relaxed">
+              <p className="text-sm text-[#a09080] leading-relaxed">
                 {heroProject.description}
               </p>
               <div className="flex flex-wrap gap-1.5 mt-1">
@@ -94,7 +94,7 @@ export default function Projects() {
                 {p.title}
               </h3>
               <p className="text-xs text-[#6b5d4e] mb-2">{p.org}</p>
-              <p className="text-xs text-[#8a7a68] leading-relaxed flex-1">
+              <p className="text-xs text-[#a09080] leading-relaxed flex-1">
                 {p.description}
               </p>
               <div className="flex flex-wrap gap-1.5 mt-3">

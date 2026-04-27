@@ -8,7 +8,7 @@
   --color-border:           #2e2820;
   --color-border-subtle:    #262218;
   --color-primary:          #ede8dc;
-  --color-muted:            #8a7a68;
+  --color-muted:            #a09080;
   --color-subtle:           #5a4f42;
   --color-accent:           #d4943a;
   --color-accent-muted:     rgba(212, 148, 58, 0.10);
@@ -60,6 +60,18 @@ body {
 .hero-item-2 { animation-delay: 100ms; }
 .hero-item-3 { animation-delay: 200ms; }
 .hero-item-4 { animation-delay: 320ms; }
+.hero-item-5 { animation-delay: 420ms; }
+
+/* ── Availability pulse dot ──────────────────────────────── */
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
 
 /* ── Dot grid (hero background) ──────────────────────────── */
 

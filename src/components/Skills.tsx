@@ -19,7 +19,7 @@ export default function Skills() {
               <span className="font-mono text-[10px] text-[#5a4f42] uppercase tracking-wider sm:w-28 shrink-0 pt-[3px]">
                 {group.category}
               </span>
-              <span className="text-sm text-[#8a7a68]">
+              <span className="text-sm text-[#a09080]">
                 {group.items.join(" · ")}
               </span>
             </div>

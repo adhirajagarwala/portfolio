@@ -11,10 +11,11 @@ export default function Writing() {
 
       <Reveal delay={80}>
         <div className="border border-[#2e2820] rounded-lg p-8 flex flex-col gap-3">
-          <p className="text-sm text-[#8a7a68] leading-relaxed">
-            Nothing here yet. I write when I have something worth saying —
-            usually about building things or how they work underneath. No
-            schedule, no newsletter.
+          <p className="text-sm text-[#a09080] leading-relaxed">
+            I write when I have something worth saying — usually about building
+            things, how they work underneath, or why a particular design
+            decision made sense. No schedule, no newsletter. First posts coming
+            soon.
           </p>
           <Link
             href="/blog"

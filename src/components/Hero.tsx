@@ -25,7 +25,26 @@ function EmailIcon() {
   );
 }
 
+function ResumeIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="16" y1="13" x2="8" y2="13" />
+      <line x1="16" y1="17" x2="8" y2="17" />
+      <polyline points="10 9 9 9 8 9" />
+    </svg>
+  );
+}
+
 export default function Hero() {
+  const links = [
+    { label: "GitHub",   href: meta.github,            icon: <GithubIcon />,   external: true  },
+    { label: "LinkedIn", href: meta.linkedin,          icon: <LinkedInIcon />, external: true  },
+    { label: "Email",    href: `mailto:${meta.email}`, icon: <EmailIcon />,    external: false },
+    ...(meta.resume ? [{ label: "Resume", href: meta.resume, icon: <ResumeIcon />, external: false }] : []),
+  ];
+
   return (
     <section className="relative min-h-[65vh] flex flex-col justify-center px-6 max-w-3xl mx-auto w-full">
       <div className="absolute inset-0 dot-grid" aria-hidden="true" />
@@ -35,21 +54,24 @@ export default function Hero() {
           Adhiraj Agarwala
         </h1>
 
-        <p className="hero-item hero-item-2 text-lg text-[#8a7a68] leading-relaxed max-w-lg">
+        <p className="hero-item hero-item-2 text-lg text-[#a09080] leading-relaxed max-w-lg">
           Studying ECE at UIUC — curious about embedded systems and what sits
           beneath the software.
         </p>
 
-        <p className="hero-item hero-item-3 font-mono text-sm text-[#5a4f42]">
+        {meta.seeking && (
+          <span className="hero-item hero-item-3 inline-flex items-center gap-2 font-mono text-[11px] text-[#d4943a] border border-[#d4943a]/25 px-3 py-1.5 rounded-full w-fit">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d4943a] pulse-dot shrink-0" />
+            {meta.seeking}
+          </span>
+        )}
+
+        <p className="hero-item hero-item-4 font-mono text-sm text-[#5a4f42]">
           Kolkata → Urbana-Champaign · UIUC &apos;28
         </p>
 
-        <div className="hero-item hero-item-4 flex items-center gap-3 flex-wrap">
-          {[
-            { label: "GitHub",   href: meta.github,            icon: <GithubIcon />,   external: true  },
-            { label: "LinkedIn", href: meta.linkedin,          icon: <LinkedInIcon />, external: true  },
-            { label: "Email",    href: `mailto:${meta.email}`, icon: <EmailIcon />,    external: false },
-          ].map((link) => (
+        <div className="hero-item hero-item-5 flex items-center gap-3 flex-wrap">
+          {links.map((link) => (
             <a
               key={link.label}
               href={link.href}

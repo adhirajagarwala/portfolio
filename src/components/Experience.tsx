@@ -26,7 +26,7 @@ export default function Experience() {
                   <p className="font-mono text-[11px] text-[#6b5d4e] mt-0.5 mb-2">
                     {e.org}
                   </p>
-                  <p className="text-sm text-[#8a7a68] leading-relaxed">
+                  <p className="text-sm text-[#a09080] leading-relaxed">
                     {e.description}
                   </p>
                   {"link" in e && e.link && (

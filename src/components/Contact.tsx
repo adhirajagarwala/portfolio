@@ -41,7 +41,9 @@ export default function Contact() {
       </Reveal>
 
       <Reveal delay={80}>
-        <p className="text-[#8a7a68] text-sm mb-8">Reach out.</p>
+        <p className="text-[#a09080] text-sm mb-8 max-w-md leading-relaxed">
+          Interested in embedded systems, hardware prototyping, and research-adjacent engineering roles. Best reached by email — I respond within a day.
+        </p>
         <div className="flex flex-col gap-4">
           {contactLinks.map((item) => (
             <div key={item.label} className="flex items-center gap-4">
@@ -52,7 +54,7 @@ export default function Contact() {
                 href={item.href}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-2 text-sm text-[#8a7a68] hover:text-[#d4943a] transition-colors"
+                className="flex items-center gap-2 text-sm text-[#a09080] hover:text-[#d4943a] transition-colors"
               >
                 {item.icon}
                 {item.value}
