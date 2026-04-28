@@ -4,7 +4,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 max-w-3xl mx-auto w-full py-20">
+    <section id="skills" className="px-6 max-w-3xl mx-auto w-full py-20 scroll-mt-20">
       <Reveal>
         <SectionHeader label="skills" heading="Skills" />
       </Reveal>

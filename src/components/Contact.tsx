@@ -35,7 +35,7 @@ const contactLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-6 max-w-3xl mx-auto w-full py-20">
+    <section id="contact" className="px-6 max-w-3xl mx-auto w-full py-20 scroll-mt-20">
       <Reveal>
         <SectionHeader label="contact" heading="Contact" />
       </Reveal>

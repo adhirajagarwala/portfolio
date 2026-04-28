@@ -13,20 +13,20 @@ export default function BlogPage() {
         <div className="flex flex-col gap-4">
           <Link
             href="/"
-            className="text-xs font-mono text-zinc-600 hover:text-zinc-400 transition-colors w-fit"
+            className="font-mono text-[11px] text-[#5a4f42] hover:text-[#d4943a] transition-colors w-fit uppercase tracking-wider"
           >
             ← Back
           </Link>
-          <h1 className="text-xs font-mono text-accent tracking-widest uppercase">
-            Writing
+          <h1 className="font-mono text-[11px] text-[#d4943a] uppercase tracking-widest">
+            // writing
           </h1>
         </div>
 
-        <div className="border border-[#1e1e2a] rounded-lg p-10 flex flex-col items-center text-center gap-4">
-          <p className="text-2xl text-zinc-600 font-mono">∅</p>
-          <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
-            Nothing here yet. I'm thinking through what to write. Check back
-            soon.
+        <div className="border border-[#2e2820] rounded-lg p-10 flex flex-col items-center text-center gap-4">
+          <p className="text-2xl text-[#2e2820] font-mono select-none">∅</p>
+          <p className="text-sm text-[#a09080] leading-relaxed max-w-xs">
+            I write when I have something worth saying. Nothing here yet — check
+            back soon.
           </p>
         </div>
       </div>

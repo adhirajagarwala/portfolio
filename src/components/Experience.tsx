@@ -4,7 +4,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 max-w-3xl mx-auto w-full py-20">
+    <section id="experience" className="px-6 max-w-3xl mx-auto w-full py-20 scroll-mt-20">
       <Reveal>
         <SectionHeader label="experience" heading="Experience" />
       </Reveal>

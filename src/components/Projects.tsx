@@ -7,7 +7,7 @@ const gridProjects = projects.slice(1).filter((p) => !p.hidden);
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-6 max-w-3xl mx-auto w-full py-20">
+    <section id="projects" className="px-6 max-w-3xl mx-auto w-full py-20 scroll-mt-20">
       <Reveal>
         <SectionHeader label="projects" heading="Projects" />
       </Reveal>

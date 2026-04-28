@@ -4,7 +4,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function Writing() {
   return (
-    <section id="writing" className="px-6 max-w-3xl mx-auto w-full py-20">
+    <section id="writing" className="px-6 max-w-3xl mx-auto w-full py-20 scroll-mt-20">
       <Reveal>
         <SectionHeader label="writing" heading="Writing" />
       </Reveal>

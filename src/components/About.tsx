@@ -15,7 +15,7 @@ const stats: { label: string; value: StatValue }[] = [
 
 export default function About() {
   return (
-    <section id="about" className="px-6 max-w-3xl mx-auto w-full py-20">
+    <section id="about" className="px-6 max-w-3xl mx-auto w-full py-20 scroll-mt-20">
       <Reveal>
         <SectionHeader label="about" heading="About" />
       </Reveal>
