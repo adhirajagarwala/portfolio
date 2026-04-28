@@ -2,7 +2,7 @@ export const meta = {
   name: "Adhiraj Agarwala",
   email: "aa166@illinois.edu",
   github: "https://github.com/adhirajagarwala",
-  linkedin: "https://linkedin.com/in/adhirajagarwala",
+  linkedin: "https://linkedin.com/in/adhirajagarwala1",
   // Add your resume PDF to /public/resume.pdf and set this to "/resume.pdf"
   resume: "" as string,
   seeking: "Open to Summer 2026 internships · embedded / hardware",
@@ -22,8 +22,27 @@ export const projects = [
     description:
       "A complete two-pass assembler for the LC-3 instruction set, written from scratch in Rust. Implements a lexer, symbol table, and binary encoder covering all 15 instructions — ADD, AND, BR, JMP, JSR, LD, LDI, LDR, LEA, NOT, ST, STI, STR, TRAP, and RTI. Error messages flag exact line, column, and cause.",
     tags: ["Rust", "Systems", "Compilers"],
-    // Update to direct repo URL once public, e.g. "https://github.com/adhirajagarwala/lc3-assembler"
-    link: undefined,
+    link: "https://github.com/adhirajagarwala/lc3-assembler",
+    hidden: false,
+  },
+  {
+    year: "2026",
+    title: "CurveCraft",
+    org: "Individual Project",
+    description:
+      "A Python toolkit for semiconductor device characterisation — fits diode and MOSFET I-V models to measured data, generates ngspice netlists, runs SPICE simulations, and validates results against analytical models. Built around the Sky130 process node.",
+    tags: ["Python", "SPICE", "Semiconductors", "Sky130"],
+    link: "https://github.com/adhirajagarwala/curvecraft",
+    hidden: false,
+  },
+  {
+    year: "2026",
+    title: "pdk-cartographer",
+    org: "Individual Project",
+    description:
+      "An exploration toolkit for the Sky130 open-source PDK. Parses Liberty timing files, maps standard-cell metadata, and builds a structured atlas of PDK anatomy — designed for fixture-first experimentation with timing arcs and cell characterisation data.",
+    tags: ["Python", "EDA", "Liberty", "Sky130"],
+    link: "https://github.com/adhirajagarwala/pdk-cartographer",
     hidden: false,
   },
   {
@@ -95,7 +114,7 @@ export const skills = [
   },
   {
     category: "Hardware",
-    items: ["Digital Logic Design", "Circuit Analysis", "Embedded Systems", "Signal Conditioning"],
+    items: ["Digital Logic Design", "Circuit Analysis", "Embedded Systems", "Signal Conditioning", "SPICE / ngspice"],
   },
   {
     category: "Software",
