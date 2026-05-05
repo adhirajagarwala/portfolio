@@ -32,10 +32,10 @@ export default function Projects() {
                     href={heroProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#5a4f42] hover:text-[#d4943a] transition-colors text-sm shrink-0 mt-0.5"
+                    className="font-mono text-[10px] text-[#5a4f42] hover:text-[#d4943a] transition-colors shrink-0 mt-0.5"
                     aria-label="View on GitHub"
                   >
-                    ↗
+                    GitHub ↗
                   </a>
                 )}
               </div>
@@ -84,9 +84,9 @@ export default function Projects() {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#5a4f42] hover:text-[#d4943a] transition-colors text-xs"
+                    className="font-mono text-[10px] text-[#5a4f42] hover:text-[#d4943a] transition-colors"
                   >
-                    ↗
+                    GitHub ↗
                   </a>
                 )}
               </div>

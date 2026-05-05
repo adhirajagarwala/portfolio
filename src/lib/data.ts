@@ -3,8 +3,7 @@ export const meta = {
   email: "aa166@illinois.edu",
   github: "https://github.com/adhirajagarwala",
   linkedin: "https://www.linkedin.com/in/adhirajagarwala1/",
-  // Add your resume PDF to /public/resume.pdf and set this to "/resume.pdf"
-  resume: "" as string,
+  resume: "/resume.pdf",
   seeking: "Open to Summer 2026 internships · embedded / hardware",
 };
 
@@ -109,12 +108,12 @@ export const projects = [
 
 export const skills = [
   {
-    category: "Languages",
-    items: ["Rust", "C", "Python", "LC-3 Assembly"],
-  },
-  {
     category: "Hardware",
     items: ["Digital Logic Design", "Circuit Analysis", "Embedded Systems", "Signal Conditioning", "SPICE / ngspice"],
+  },
+  {
+    category: "Languages",
+    items: ["Rust", "C", "Python", "LC-3 Assembly"],
   },
   {
     category: "Software",

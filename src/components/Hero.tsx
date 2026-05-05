@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { meta } from "@/lib/data";
 
 function GithubIcon() {
@@ -49,41 +50,61 @@ export default function Hero() {
     <section className="relative min-h-[65vh] flex flex-col justify-center px-6 max-w-3xl mx-auto w-full">
       <div className="absolute inset-0 dot-grid" aria-hidden="true" />
 
-      <div className="relative z-10 flex flex-col gap-5 max-w-xl">
-        <h1 className="hero-item hero-item-1 text-5xl sm:text-6xl font-light text-[#ede8dc] tracking-tight leading-[1.1]">
-          Adhiraj Agarwala
-        </h1>
+      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10">
 
-        <p className="hero-item hero-item-2 text-lg text-[#a09080] leading-relaxed max-w-lg">
-          Studying ECE at UIUC — curious about embedded systems and what sits
-          beneath the software.
-        </p>
+        {/* ── Text content ─────────────────────────────────── */}
+        <div className="flex flex-col gap-5 max-w-lg">
+          <h1 className="hero-item hero-item-1 text-5xl sm:text-6xl font-light text-[#ede8dc] tracking-tight leading-[1.1]">
+            Adhiraj Agarwala
+          </h1>
 
-        {meta.seeking && (
-          <span className="hero-item hero-item-3 inline-flex items-center gap-2 font-mono text-[11px] text-[#d4943a] border border-[#d4943a]/25 px-3 py-1.5 rounded-full w-fit">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#d4943a] pulse-dot shrink-0" />
-            {meta.seeking}
-          </span>
-        )}
+          <p className="hero-item hero-item-2 text-lg text-[#a09080] leading-relaxed">
+            Studying ECE at UIUC — curious about embedded systems and what sits
+            beneath the software.
+          </p>
 
-        <p className="hero-item hero-item-4 font-mono text-sm text-[#5a4f42]">
-          Kolkata → Urbana-Champaign · UIUC &apos;28
-        </p>
+          {meta.seeking && (
+            <span className="hero-item hero-item-3 inline-flex items-center gap-2 font-mono text-[11px] text-[#d4943a] border border-[#d4943a]/25 px-3 py-1.5 rounded-full w-fit">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#d4943a] pulse-dot shrink-0" />
+              {meta.seeking}
+            </span>
+          )}
 
-        <div className="hero-item hero-item-5 flex items-center gap-3 flex-wrap">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
-              className="inline-flex items-center gap-1.5 text-xs text-[#8a7a68] border border-[#2e2820] px-3 py-1.5 rounded-full hover:text-[#ede8dc] hover:border-[#5a4f42] transition-colors"
-            >
-              {link.icon}
-              {link.label}
-            </a>
-          ))}
+          <p className="hero-item hero-item-4 font-mono text-sm text-[#5a4f42]">
+            Kolkata → Urbana-Champaign · UIUC &apos;28
+          </p>
+
+          <div className="hero-item hero-item-5 flex items-center gap-3 flex-wrap">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                className="inline-flex items-center gap-1.5 text-xs text-[#8a7a68] border border-[#2e2820] px-3 py-1.5 rounded-full hover:text-[#ede8dc] hover:border-[#5a4f42] transition-colors"
+              >
+                {link.icon}
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
+
+        {/* ── Photo ────────────────────────────────────────── */}
+        <div className="hero-item hero-item-2 shrink-0 self-center order-first sm:order-last">
+          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-1 ring-[#d4943a]/30 ring-offset-4 ring-offset-[#14110e]">
+            <Image
+              src="/avatar.jpg"
+              alt="Adhiraj Agarwala"
+              width={144}
+              height={144}
+              className="w-full h-full object-cover object-top"
+              priority
+              draggable={false}
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
