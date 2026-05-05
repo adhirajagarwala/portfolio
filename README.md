@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# adhirajagarwala.com
 
-## Getting Started
+Personal portfolio site for Adhiraj Agarwala — ECE student at UIUC focused on embedded systems, digital logic, and hardware-software interfaces.
 
-First, run the development server:
+**Live:** [adhirajagarwala.com](https://adhirajagarwala.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Styling | Tailwind CSS v4 |
+| Fonts | Inter · JetBrains Mono (via `next/font/google`) |
+| Analytics | Vercel Analytics + Speed Insights |
+| Deployment | Vercel — auto-deploys on push to `main` |
+
+## Structure
+
+```
+src/
+  app/
+    globals.css        # design tokens, animations, dot-grid
+    layout.tsx         # fonts, metadata, analytics
+    page.tsx           # page assembly
+    not-found.tsx      # 404 page
+    sitemap.ts         # dynamic sitemap for SEO
+    robots.ts          # robots.txt
+    blog/page.tsx      # writing placeholder
+  components/          # one file per section
+    Nav.tsx            # sticky nav with scroll-spy + mobile hamburger
+    Hero.tsx           # stagger animations, photo, availability badge, resume pill
+    About.tsx          # bio + stats grid
+    Projects.tsx       # hero card + 2-col grid
+    Skills.tsx         # category table
+    Experience.tsx     # vertical timeline
+    Education.tsx      # vertical timeline
+    Writing.tsx        # blog placeholder card
+    Contact.tsx        # contact links
+    Footer.tsx
+    Reveal.tsx         # IntersectionObserver scroll reveal
+    SectionHeader.tsx  # reusable section heading pattern
+  lib/
+    data.ts            # all site content — edit here, nowhere else
+public/
+  avatar.jpg           # headshot
+  resume.pdf           # resume
+next.config.ts         # security headers
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+# → http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+**All written content lives in `src/lib/data.ts`.** No component files need to change for text updates, new projects, or experience entries.
 
-To learn more about Next.js, take a look at the following resources:
+Key fields:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```ts
+meta.resume   // set to "/resume.pdf" to show Resume pill in hero
+meta.seeking  // availability badge text — set to "" to hide
+projects[]    // hidden: true hides a project without deleting it
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Every push to `main` triggers a Vercel deployment automatically.
+Vercel project root is set to `portfolio/` — do not change this.
