@@ -2,7 +2,7 @@ export const meta = {
   name: "Adhiraj Agarwala",
   email: "aa166@illinois.edu",
   github: "https://github.com/adhirajagarwala",
-  linkedin: "https://linkedin.com/in/adhirajagarwala1",
+  linkedin: "https://www.linkedin.com/in/adhirajagarwala1/",
   // Add your resume PDF to /public/resume.pdf and set this to "/resume.pdf"
   resume: "" as string,
   seeking: "Open to Summer 2026 internships · embedded / hardware",
@@ -30,18 +30,18 @@ export const projects = [
     title: "CurveCraft",
     org: "Individual Project",
     description:
-      "A Python toolkit for semiconductor device characterisation — fits diode and MOSFET I-V models to measured data, generates ngspice netlists, runs SPICE simulations, and validates results against analytical models. Built around the Sky130 process node.",
-    tags: ["Python", "SPICE", "Semiconductors", "Sky130"],
+      "A Python semiconductor device-modelling toolkit. Implements diode I-V curve fitting, MOSFET Id–Vgs and Id–Vds fitting, and Rds_on extraction — each with ngspice netlist generation, SPICE simulation, and validation against analytical models. Maintained with CI, release tags, engineering logs, and structured milestone tracking.",
+    tags: ["Python", "ngspice", "SPICE", "MOSFET", "Sky130"],
     link: "https://github.com/adhirajagarwala/curvecraft",
     hidden: false,
   },
   {
     year: "2026",
-    title: "pdk-cartographer",
+    title: "PDK Cartographer",
     org: "Individual Project",
     description:
-      "An exploration toolkit for the Sky130 open-source PDK. Parses Liberty timing files, maps standard-cell metadata, and builds a structured atlas of PDK anatomy — designed for fixture-first experimentation with timing arcs and cell characterisation data.",
-    tags: ["Python", "EDA", "Liberty", "Sky130"],
+      "A fixture-first Sky130 PDK exploration toolkit. Implements a typed Liberty parser — lexer, group parsing, and dataclasses for cells, pins, timing arcs, lookup-table templates, and timing tables. Validated read-only against 1,474 real Sky130 Liberty files; generates deterministic Markdown, CSV, and JSON reports for standard-cell atlases, timing-table summaries, and PDK manifests. Maintained with pytest, ruff, mypy, and CI.",
+    tags: ["Python", "Liberty", "EDA", "Sky130", "pytest"],
     link: "https://github.com/adhirajagarwala/pdk-cartographer",
     hidden: false,
   },
