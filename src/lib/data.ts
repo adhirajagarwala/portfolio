@@ -113,7 +113,7 @@ export const skills = [
   },
   {
     category: "Languages",
-    items: ["Rust", "C", "Python", "LC-3 Assembly"],
+    items: ["Rust", "C", "Python", "TypeScript", "LC-3 Assembly"],
   },
   {
     category: "Software",
