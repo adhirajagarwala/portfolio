@@ -4,7 +4,7 @@ export const meta = {
   github: "https://github.com/adhirajagarwala",
   linkedin: "https://www.linkedin.com/in/adhirajagarwala1/",
   resume: "/resume.pdf",
-  seeking: "Open to Summer 2026 internships · embedded / hardware",
+  seeking: "Open to Fall 2026 internships · embedded / hardware",
 };
 
 export const about = `I build systems that sit close to the hardware — assemblers, logic circuits, sensor pipelines. Currently studying ECE at UIUC with a focus on embedded systems and digital design.
