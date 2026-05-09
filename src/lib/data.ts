@@ -7,11 +7,11 @@ export const meta = {
   seeking: "Open to Fall 2026 internships · embedded / hardware",
 };
 
-export const about = `I build systems that sit close to the hardware — assemblers, logic circuits, sensor pipelines. Currently studying ECE at UIUC with a focus on embedded systems and digital design.
+export const about = `I build systems that sit close to the hardware — assemblers, logic circuits, sensor pipelines. Currently studying ECE at UIUC as a James Scholar with a focus on embedded systems and digital design.
 
-At UIUC I'm on the Illini Electric Motorsports team working on low voltage and sensor integration for the formula EV car. Before that: a lunar habitat power grid at ISSDC where our team placed runner-up internationally, a CERN beamline proposal, and Paperio — a tool that makes dense technical papers actually readable.
+At UIUC I'm on the Illini Electric Motorsports team working on low voltage and sensor integration for the formula EV car. Before that: a lunar habitat power distribution system at ISSDC where our team placed runner-up internationally, a CERN beamline proposal as team lead, and Paperio — a pipeline that makes dense academic papers actually readable.
 
-I grew up in Kolkata. Outside engineering, I spent three years on the board of Brightbytes, scaling a computing literacy program for kids across three community centres.`;
+I grew up in Kolkata. Outside engineering, I spent three years on the board of Brightbytes, scaling a computing literacy program from 50 to 150 learners across three community centres.`;
 
 export const projects = [
   {
